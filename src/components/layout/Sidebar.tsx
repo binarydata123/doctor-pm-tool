@@ -1769,7 +1769,7 @@ export function Sidebar({
                 Chats
               </h1>
               <p className="truncate text-xs text-slate-500 dark:text-slate-400">
-                {activeWorkspace?.name || "PM-Tool"}
+                {activeWorkspace?.name || "DPM-Tool"}
               </p>
             </div>
             <div className="flex items-center gap-1">
@@ -2033,9 +2033,9 @@ export function Sidebar({
         >
           <div className="flex items-center gap-2.5 min-w-0">
             {/* App Icon - Slightly larger on mobile rail for better touch targets */}
-            <div className="w-10 h-10 lg:w-7 lg:h-7 rounded-xl lg:rounded-lg flex items-center justify-center flex-shrink-0 shadow-sm bg-[#3178c6]">
+            <div className="w-10 h-10 lg:w-7 lg:h-7 rounded-xl lg:rounded-lg flex items-center justify-center px-2 flex-shrink-0 shadow-sm bg-[#3178c6]">
               <span className="text-white text-[14px] lg:text-[11px] font-black tracking-tight leading-none">
-                PM
+                DPM
               </span>
             </div>
             {/* Label hidden on mobile */}
@@ -2044,7 +2044,7 @@ export function Sidebar({
                 mobileListMode ? "block" : "hidden lg:block"
               } text-[15px] font-bold text-[#060607] truncate dark:text-white`}
             >
-              {activeWorkspace?.name || "PM-Tool"}
+              {activeWorkspace?.name || "DPM-Tool"}
             </span>
           </div>
           {workspaces.length > 1 ? (
