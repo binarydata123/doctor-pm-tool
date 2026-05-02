@@ -1804,7 +1804,7 @@ export function Sidebar({
                   <button
                     type="button"
                     onClick={onInvitePeople}
-                    aria-label="Invite teammates"
+                    aria-label="Invite Patients & Staff"
                     className="flex h-10 w-10 items-center justify-center rounded-full text-[#3178c6] hover:bg-slate-100 dark:hover:bg-slate-800"
                   >
                     <UserPlus size={20} />
@@ -1875,7 +1875,7 @@ export function Sidebar({
                     : chatRows.length > 0
                       ? "Try a different name."
                       : canManageWorkspace
-                        ? "Create a channel or invite teammates to get started."
+                        ? "Create a channel or invite patients & staff to get started."
                         : "Your channels and direct messages will appear here."}
                 </p>
               </div>
@@ -3183,7 +3183,7 @@ export function Sidebar({
             </div>
 
             <span className="flex-1 truncate text-[14px] font-medium text-left">
-              Invite teammates
+              Invite Patients & Staff
             </span>
 
             {/* A very subtle indicator that only appears on hover */}
