@@ -123,7 +123,7 @@ export function MessageActionSheet({
       danger: false,
     },
     {
-      label: "Add to Task",
+      label: "Add to Tasks",
       icon: <ListTodo size={17} />,
       onClick: onAddToTodo,
       show: true,

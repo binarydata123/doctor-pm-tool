@@ -2150,8 +2150,8 @@ export function ChatDetailsPanel({
 
     return renderSectionEmptyState(
       LinkIcon,
-      "No shared URLs",
-      "Links shared in this conversation will appear here.",
+      "No Resources Found",
+      "Resource Links shared in this conversation will appear here.",
     );
   };
 
@@ -2183,8 +2183,8 @@ export function ChatDetailsPanel({
 
     return renderSectionEmptyState(
       ImageIcon,
-      "No photos or media",
-      "Files and media shared in this conversation will appear here.",
+      "No reports or scans",
+      "Reports and scans shared in this conversation will appear here.",
     );
   };
 
@@ -2341,7 +2341,7 @@ export function ChatDetailsPanel({
         value={notes}
         onChange={(e) => setNotes(e.target.value)}
         className="min-h-[890px] w-full rounded-xl border border-slate-200 px-4 py-3 text-sm text-slate-600 outline-none placeholder:text-slate-400 focus:border-primary-400 focus:ring-2 focus:ring-primary-100"
-        placeholder="This is a personal note for this chat."
+        placeholder="This is a note for this chat."
       />
     </>
   );
@@ -2725,7 +2725,7 @@ export function ChatDetailsPanel({
           <div className="transform rounded-xl bg-white shadow-md dark:border dark:border-[#344155] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg">
             <SectionHeader
               icon={LinkIcon}
-              label="Shared urls"
+              label="Medical Resources Links"
               onExpand={() => setExpandedDrawer("urls")}
               badge={sharedUrls.length}
             />
@@ -2735,7 +2735,7 @@ export function ChatDetailsPanel({
           <div className="transform rounded-xl bg-white shadow-md dark:border dark:border-[#344155] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg">
             <SectionHeader
               icon={ImageIcon}
-              label="Photos & Media"
+              label="Patient Reports & Scans"
               onExpand={() => setExpandedDrawer("media")}
               badge={mediaItems.length}
             />
@@ -2765,7 +2765,7 @@ export function ChatDetailsPanel({
           <div className="transform rounded-xl bg-white shadow-md dark:border dark:border-[#344155] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg">
             <SectionHeader
               icon={ListTodo}
-              label="Task"
+              label="Tasks"
               onExpand={() => setExpandedDrawer("todo")}
               badge={todoCount}
             />
@@ -2785,7 +2785,7 @@ export function ChatDetailsPanel({
         <div className="mt-5 transform rounded-xl bg-white shadow-md dark:border dark:border-[#344155] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg">
           <SectionHeader
             icon={Mail}
-            label="Personal notes"
+            label="Doctor's Notes"
             onExpand={() => setExpandedDrawer("notes")}
           />
         </div>
@@ -2800,9 +2800,9 @@ export function ChatDetailsPanel({
                 </h3>
 
                 <p className="text-sm leading-relaxed text-slate-400">
-                  Get faster access to your workspace, receive instant updates,
-                  and stay connected with your team anytime, anywhere. Install
-                  the app for a smoother and better experience.
+                  Access patient data, prescriptions, and clinical updates
+                  instantly. Stay connected with your healthcare team and manage
+                  care seamlessly from anywhere.
                 </p>
 
                 <div className="pt-2">
@@ -2850,13 +2850,13 @@ export function ChatDetailsPanel({
       {renderDrawerShell({
         sectionKey: "urls",
         icon: LinkIcon,
-        title: "Shared urls",
+        title: "Medical Resources Links",
         children: renderUrlRows(),
       })}
       {renderDrawerShell({
         sectionKey: "media",
         icon: ImageIcon,
-        title: "Photos & Media",
+        title: "Patient Reports & Scans",
         children: renderMediaRows(),
       })}
       {renderDrawerShell({
@@ -2880,7 +2880,7 @@ export function ChatDetailsPanel({
       {renderDrawerShell({
         sectionKey: "notes",
         icon: Mail,
-        title: "Personal notes",
+        title: "Doctor's Notes",
         headerExtra: detailsSaveMessage ? (
           <span className="ml-1 text-xs font-medium text-slate-500">
             {detailsSaveMessage}
@@ -2891,7 +2891,7 @@ export function ChatDetailsPanel({
       {renderDrawerShell({
         sectionKey: "todo",
         icon: ListTodo,
-        title: "Task",
+        title: "Tasks",
         children: renderTodoRows(true),
       })}
     </>
