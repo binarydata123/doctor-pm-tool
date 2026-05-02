@@ -90,7 +90,7 @@ if ("serviceWorker" in navigator) {
         console.log("SW registered:", registration.scope);
         void registration.update();
       })
-      .catch((err) => console.error("SW failed:", err));
+      .catch((err) => console.error("Error SW failed:", err));
   });
 }
 
