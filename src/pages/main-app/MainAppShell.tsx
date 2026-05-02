@@ -992,8 +992,8 @@ export function MainAppShell({
                 Welcome to DPM-Tool
               </h2>
               <p className="mb-8 max-w-md text-slate-600 dark:text-slate-300">
-                Select a channel or start a direct message to begin
-                collaborating with your team.
+                Manage patients, schedule appointments, and collaborate with
+                your medical team seamlessly.
               </p>
               <div className="flex justify-center gap-3">
                 {canManageWorkspace && (
