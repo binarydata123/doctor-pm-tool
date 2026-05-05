@@ -2548,7 +2548,7 @@ export function MessageList({
     <div
       ref={scrollContainerRef}
       onScroll={handleScroll}
-      className="flex-1 overflow-y-auto bg-white custom-scrollbar"
+      className="flex-1 select-none overflow-y-auto bg-white custom-scrollbar sm:select-text"
     >
       {isInitialLoading && messages.length === 0 ? (
         renderInitialSkeleton()
@@ -3131,6 +3131,7 @@ export function MessageList({
                                   renderAttachment(message)}{" "}
                                 {/* This needs to be updated for broadcast too */}
                                 <div
+                                  data-selectable-message-text
                                   className={`min-w-0 select-none whitespace-pre-wrap text-[14px] leading-[1.4] [overflow-wrap:anywhere] [word-break:break-word] sm:select-text ${message.is_deleted ? "italic" : ""}`}
                                 >
                                   {renderMentions(
